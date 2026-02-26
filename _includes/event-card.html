@@ -1,0 +1,17 @@
+<div class="col-md-4 mb-4">
+  <div class="card h-100 border-0 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title">{{ event.title }}</h5>
+      <p class="card-text text-muted small">
+        {{ event.date | date: "%B %-d, %Y at %-I:%M %p" }}<br>
+        {{ event.location }}
+      </p>
+      <p class="card-text">{{ event.description }}</p>
+    </div>
+    {% if event.link %}
+    <div class="card-footer bg-transparent border-0 pb-3">
+      <a href="{{ event.link }}" class="btn btn-accent btn-sm" target="_blank" rel="noopener">RSVP</a>
+    </div>
+    {% endif %}
+  </div>
+</div>

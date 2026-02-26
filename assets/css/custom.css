@@ -1,0 +1,118 @@
+/* Indivisible Brand Colors */
+:root {
+  --indivisible-blue: #002147;
+  --indivisible-red: #BB133E;
+  --bs-primary: #002147;
+  --bs-primary-rgb: 0, 33, 71;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar.bg-primary,
+.bg-primary {
+  background-color: var(--indivisible-blue) !important;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+}
+
+/* Accent button (Indivisible Red) */
+.btn-accent {
+  background-color: var(--indivisible-red);
+  border-color: var(--indivisible-red);
+  color: #fff;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: #9a0f33;
+  border-color: #9a0f33;
+  color: #fff;
+}
+
+/* Primary button overrides */
+.btn-primary {
+  background-color: var(--indivisible-blue);
+  border-color: var(--indivisible-blue);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #001a38;
+  border-color: #001a38;
+}
+
+.btn-outline-primary {
+  color: var(--indivisible-blue);
+  border-color: var(--indivisible-blue);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--indivisible-blue);
+  border-color: var(--indivisible-blue);
+  color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--indivisible-blue) 0%, #003366 100%);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--indivisible-blue);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.site-footer a {
+  color: #fff;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card-title a {
+  color: var(--indivisible-blue);
+}
+
+.card-title a:hover {
+  color: var(--indivisible-red);
+}
+
+/* Post content */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Badge overrides */
+.badge.bg-secondary {
+  background-color: var(--indivisible-blue) !important;
+}
+
+/* Links */
+a {
+  color: var(--indivisible-blue);
+}
+
+a:hover {
+  color: var(--indivisible-red);
+}

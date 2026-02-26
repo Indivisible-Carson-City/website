@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<section class="hero-section text-white text-center py-5">
+  <div class="container py-5">
+    <h1 class="display-4 fw-bold">Indivisible Carson City</h1>
+    <p class="lead mb-4">Grassroots civic engagement in Carson City, Nevada</p>
+    <a href="#events" class="btn btn-accent btn-lg me-2">Upcoming Events</a>
+    <a href="{{ '/blog' | relative_url }}" class="btn btn-outline-light btn-lg">Read Our Blog</a>
+  </div>
+</section>
+
+<section id="events" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Upcoming Events</h2>
+    {% if site.data.events.size > 0 %}
+    <div class="row">
+      {% for event in site.data.events %}
+        {% include event-card.html event=event %}
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-center text-muted">No upcoming events. Check back soon!</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Recent Posts</h2>
+    {% assign recent_posts = site.posts | slice: 0, 3 %}
+    {% if recent_posts.size > 0 %}
+    <div class="row">
+      {% for post in recent_posts %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+    <div class="text-center mt-3">
+      <a href="{{ '/blog' | relative_url }}" class="btn btn-outline-primary">View all posts</a>
+    </div>
+    {% else %}
+    <p class="text-center text-muted">No posts yet. Stay tuned!</p>
+    {% endif %}
+  </div>
+</section>
+
+{{ content }}
